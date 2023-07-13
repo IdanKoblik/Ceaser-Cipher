@@ -46,26 +46,26 @@ func main() {
 		fmt.Println("3. Exit")
 
 		var option int
-		fmt.Scanln(&option)
+		_, _ = fmt.Scanln(&option)
 
 		if option == 1 {
-			fmt.Print("Please enter the text to encode:")
+			fmt.Print("Please enter the text to encode: ")
 			var text string
-			fmt.Scan(&text)
+			_, _ = fmt.Scan(&text)
 
-			fmt.Print("Please enter the shift:")
+			fmt.Print("Please enter the shift: ")
 			var shift rune
-			fmt.Scan(&shift)
+			_, _ = fmt.Scan(&shift)
 
 			fmt.Println(encoder(text, shift))
 		} else if option == 2 {
-			fmt.Print("Please enter the text to decode:")
+			fmt.Print("Please enter the text to decode: ")
 			var text string
-			fmt.Scan(&text)
+			_, _ = fmt.Scan(&text)
 
-			fmt.Print("Please enter the shift:")
+			fmt.Print("Please enter the shift: ")
 			var shift rune
-			fmt.Scanln(&shift)
+			_, _ = fmt.Scanln(&shift)
 
 			fmt.Println(decoder(text, shift))
 		} else if option == 3 {
