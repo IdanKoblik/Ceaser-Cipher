@@ -1,7 +1,7 @@
 package main
 
-func encode(text string, shift rune) string {
-	encoded := ""
+func Encode(text string, shift rune) string {
+	var encoded = ""
 
 	for _, char := range text {
 		if char >= 'A' && char <= 'Z' {

@@ -1,7 +1,7 @@
 package main
 
-func decode(text string, shift rune) string {
-	decoded := ""
+func Decode(text string, shift rune) string {
+	var decoded = ""
 
 	for _, char := range text {
 		if char >= 'A' && char <= 'Z' {

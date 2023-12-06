@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	for true {
+	for {
 		fmt.Println("Welcome to Caesar Cipher decoder/encoder in Golang")
 
 		fmt.Println("Please choose an option:")
@@ -16,7 +16,8 @@ func main() {
 		var option int
 		_, _ = fmt.Scanln(&option)
 
-		if option == 1 {
+		switch option {
+		case 1:
 			fmt.Print("Please enter the text to encode: ")
 			var text string
 			_, _ = fmt.Scan(&text)
@@ -25,8 +26,8 @@ func main() {
 			var shift rune
 			_, _ = fmt.Scan(&shift)
 
-			fmt.Println(encode(text, shift))
-		} else if option == 2 {
+			fmt.Println(Encode(text, shift))
+		case 2:
 			fmt.Print("Please enter the text to decode: ")
 			var text string
 			_, _ = fmt.Scan(&text)
@@ -35,12 +36,11 @@ func main() {
 			var shift rune
 			_, _ = fmt.Scanln(&shift)
 
-			fmt.Println(decode(text, shift))
-		} else if option == 3 {
+			fmt.Println(Decode(text, shift))
+		case 3:
 			return
-		} else {
-			fmt.Println("Invalid option")
-			return
+		default:
+			fmt.Println("Please choose an option 1/2/3")
 		}
 	}
 }
